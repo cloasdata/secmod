@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.cfg
+src/secmod/__init__.py
+src/secmod.egg-info/PKG-INFO
+src/secmod.egg-info/SOURCES.txt
+src/secmod.egg-info/dependency_links.txt
+src/secmod.egg-info/not-zip-safe
+src/secmod.egg-info/requires.txt
+src/secmod.egg-info/top_level.txt
+test/test_secmod.py

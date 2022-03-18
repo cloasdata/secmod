@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: secmod
+Version: 0.1.0
+Summary: secure module interface
+Home-page: https://github.com/cloasdata/secmod
+Author: Simon Bauer
+Author-email: code@seimenadventure.de
+License: MIT
+Keywords: python,module,import,importlib
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Provides-Extra: test
+License-File: LICENSE.md
+
+# secmod
+
+A simple module proxy for python.
+Avoids importing the module but gives an interface like ModuleType.
+
+This useful when you want to examine the contents of the module without executing it.
+For example so safe the docstring or code in a database. 
+
+
+## Install
+
+    pip install secmod
+
+or install it from github
+    
+    pip install git+https://github.com/cloasdata/secmod.git
+
+or just clone it
+
+## usage
+```python
+from pathlib import Path
+from secmod import ModuleProxy
+
+fp_module = Path("some_module.py")
+module = ModuleProxy(fp_module)
+
+print(module.__doc__)
+
+```
+Copyright © 2022 Simon Bauer
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
